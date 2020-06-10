@@ -1,0 +1,70 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+#define REP(a, n) for (int i = a; i < n; i++)
+#define pb(a) push_back(a)
+#define mod 1000000007
+
+ 
+typedef long long ll;
+typedef long l;
+typedef unsigned long long ull;
+typedef vector<int> V;
+typedef pair<ll, ll> pll;
+typedef vector<ll> vll;
+typedef vector<pll> vpll;
+typedef vector<vll> vvll;
+typedef vector<string> vs;
+typedef map<int,int> Map;
+
+void IO(){
+  #ifndef ONLINE_JUDGE
+    freopen("input1.txt", "r", stdin);
+    freopen("output1.txt", "w", stdout);
+ #endif
+}
+
+//Check for prime
+ bool isPrime(int num){
+   if(num==1)
+    return false;
+    for(int i=2 ; i*i<num ; i++)
+      if(num%i==0)
+       return false;  
+    return true;
+ }
+
+//SieveofEratosthenes
+  void sieveofEratosthenes(ll maxn= 50000000){
+    int is_prime[50000001];
+      for(ll i=0; i<=maxn ; i++){is_prime[i]=1;}
+        is_prime[0]=is_prime[1]=0;
+
+        for(ll i=2 ; i*i<maxn  ;i++){
+          if(is_prime[i]){
+           for(int j= i*i; j<=maxn ; j+=i){
+          is_prime[j]=0;
+    }   }
+  }
+}
+
+
+
+
+
+
+int main(){
+  IO();
+  ios_base::sync_with_stdio(false);
+  cin.tie(NULL);cout.tie(NULL);
+
+    
+
+}
+
+  
+ 
+ 
+ 
+    
+ 
